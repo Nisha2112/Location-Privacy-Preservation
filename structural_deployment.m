@@ -1,7 +1,12 @@
 close all;
 clear;
 clc;
-diary structural_deployment.txt
+dfile='structural_deployment.txt';
+if exist(dfile,'file')
+    delete(dfile);
+end
+diary (dfile)
+diary on
 %%%%%%%%%%%%%%%%%%%% Network Establishment Parameters %%%%%%%%%%%%%%%%%%%%
 % Field Dimensions in meters %
 %Reading network parameters from the config text file
@@ -370,3 +375,4 @@ end
      end
 
 fprintf('\n total no. of nodes %d \n', total);
+diary off
