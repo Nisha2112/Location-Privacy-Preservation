@@ -320,7 +320,8 @@ end
      ct_assetcaptured=0;% counter to count the number of times asset captured
      assetcapturedround=0;
     for round=1:rnd
-         round
+          %   round
+         fprintf("\n Sending %d th packet ",round);
          clheads=0;
          total_hops=0; %to find the total number of hops per packet 
          tec=0; %to find the total energy consumption per packet
